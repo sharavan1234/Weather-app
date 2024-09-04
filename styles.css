@@ -1,0 +1,204 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between;
+}
+
+.weatherInfo {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-left: 10px;
+    margin-bottom: 20px; /* Add margin between weatherInfo cards */
+}
+
+.sidebar {
+    width: 100%; /* Full width on small screens */
+    padding-left: 10px;
+}
+
+.search {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#cityInput {
+    flex: 1; /* Take remaining space */
+    max-width: 300px; /* Limit maximum width */
+    padding: 10px;
+    margin-right: 10px; /* Add margin between input and button */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    outline: none;
+}
+
+#searchBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+}
+
+#searchBtn:hover {
+    opacity: 0.8;
+}
+
+.favoriteCity {
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.favoriteCity .temperature {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.favoriteCity .deleteBtn {
+    font-weight: bold;
+    margin-left: auto;
+}
+
+.deleteBtn {
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#clearHistoryBtn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#clearHistoryBtn:hover,
+.deleteBtn:hover,
+#searchBtn:hover {
+    opacity: 0.8;
+}
+#favorites,
+#recentSearches {
+    background-color: #fff;
+    padding: 20px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.recentSearch,
+.favoriteCity {
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.deleteBtn {
+    padding: 8px 16px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#clearHistoryBtn {
+    margin-top: 10px;
+    padding: 8px 16px ;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.recentSearch:hover,
+.favoriteCity:hover,
+.deleteBtn:hover,
+#clearHistoryBtn:hover {
+    opacity: 0.8;
+}
+#favoriteIcon {
+    display: none; /* Initially hidden until weather data is displayed */
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+}
+
+#favoriteIcon:hover {
+    opacity: 0.8;
+}
+
+
+@media only screen and (min-width: 768px) {
+    /* For tablets and larger screens */
+    .main {
+        flex-direction: row; /* Arrange items horizontally */
+        align-items: flex-start; /* Align items to the top */
+        justify-content: space-between;
+    }
+
+    .weatherInfo {
+        width: 60%; /* Take up 60% of the width */
+        margin-bottom: 0;
+    }
+
+    .sidebar {
+        display: block; /* Show sidebar */
+        width: 30%; /* Take up 30% of the width */
+        padding-left: 20px;
+    }
+}
